@@ -4,11 +4,11 @@ Docker image for NFS client
 This is a Docker image for a light NFS client (~10MB) compatible with database usage. By default NFS 3 is used (but the ENV enable you to change this).
 
 Docker image
-image name walkerk1980/rancher-nfs-client
+image name ryanwclark/rancher-nfs-client
 
-docker pull walkerk1980/rancher-nfs-client
+docker pull ryanwclark/rancher-nfs-client
 
-Docker hub repository: https://hub.docker.com/r/walkerk1980/rancher-nfs-client/
+Docker hub repository: https://hub.docker.com/r/ryanwclark/rancher-nfs-client/
 
 Origin
 Based on https://github.com/flaccid/docker-nfs-client
