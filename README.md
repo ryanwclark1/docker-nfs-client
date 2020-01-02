@@ -27,14 +27,14 @@ Several possibilities:
 1. Mount your NFS mount-point manually on your host
 Run the container
 
-docker run -itd --privileged=true --net=host walkerk1980/rancher-nfs-client
+docker run -itd --privileged=true --net=host ryanwclark1/rancher-nfs-client
 
 then you can use NFS to mount all your mountpoints on your host
 
 sudo mount -t nfs SERVER_IP:/shared_path /mount_point
 
 2. Mount the mount-point into the rancher-nfs-client container
-Basic command docker run -itd --privileged=true --net=host -e SERVER=nfs_server_ip -e SHARE=shared_path walkerk1980/rancher-nfs-client
+Basic command docker run -itd --privileged=true --net=host -e SERVER=nfs_server_ip -e SHARE=shared_path ryanwclark1/rancher-nfs-client
 
 **It is more convenient to set a volume **
 
