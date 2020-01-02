@@ -12,16 +12,16 @@ FROM       alpine:latest
 #             --privileged=true \
 #             --net=host \
 #             -v /mnt/host:/mnt/container \
-#             -e SERVER=192.168.0.9 \
+#             -e SERVER=192.168.1.147 \
 #             -e SHARE=movies \
-#             -e MOUNT_OPTIONS="nfsvers=3,ro" \
+#             -e MOUNT_OPTIONS="nfsvers=4,ro" \
 #             -e FSTYPE=nfs3 \
 #             -e MOUNTPOINT=/mnt/host/mnt/nfs-1 \
 #                nfs-client
 
-#to enable nfs4 simply switch the FSTYPE to nfs4 and set nfsvers=4 
-ENV FSTYPE nfs
-ENV MOUNT_OPTIONS nfsvers=3
+#to enable nfs3 simply switch the FSTYPE to nfs and set nfsvers=3
+ENV FSTYPE nfs4
+ENV MOUNT_OPTIONS nfsvers=4
 ENV MOUNTPOINT /mnt/nfs-1
 
 RUN apk update && apk add --update nfs-utils && rm -rf /var/cache/apk/*
